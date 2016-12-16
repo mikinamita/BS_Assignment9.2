@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Html List</title>
+<meta charset="UTF-8">
+<script src=“https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js”></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form class="form-horizontal">
+ <div class="form-group">
+    <label class="control-label col-sm-2" for="nam">Name:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="nam" placeholder="Enter Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-4">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-4">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" onclick="retrive()">Submit</button>
+    </div>
+  </div>
+</form>
+
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+  
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Registration Form Detail</h4>
+      </div>
+      <div class="modal-body">
+        <p id="p1"></p>
+		 <p id="p2"></p>
+		  <p id="p3"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+function retrive()
+{
+var Name = document.getElementById("nam").value;
+console.log(Name);
+document.getElementById("p1").innerHTML="Name:"+Name;
+var Email = document.getElementById("email").value;
+document.getElementById("p2").innerHTML="Email:"+Email;
+var Password = document.getElementById("pwd").value;
+document.getElementById("p3").innerHTML="Password:"+Password;
+}
+</script>
+</body>
+</html>
